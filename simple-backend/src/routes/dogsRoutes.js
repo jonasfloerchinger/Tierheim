@@ -1,12 +1,11 @@
 import express from "express";
-import { getDog, getDogByDogBreed, getDogById } from "../controllers/dogsControllers.js";
 import {
     getDog,
     getDogByDogBreed,
     getDogById,
     addDog,
     newDogValidators,
-  } from "./dogsControllers.js";
+  } from "../controllers/dogsControllers.js";
 
   const router = express.Router();
 
