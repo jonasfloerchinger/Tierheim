@@ -1,42 +1,34 @@
 import { check, validationResult } from "express-validator";
+import { Dog } from "../models/dog.js";
 
-const dogs =[
-    {
-        id: 0,
-        dogBreed: "akita ino",
-        colour: "orange",
-        age: 2,
-    },
-    {
-        id: 1,
-        dogBreed: "schäferhund",
-        colour: "braun",
-        age: 5,
-    },
-];
 
-export const getDogs=(req,res)=> {
+export const getDogs=async (req,res)=> {
+    const dogs = await Dog.find();
     res.status(200).send(dogs);
 };
 
-export const findDogs=(req,res)=> {
-    let result = dogs.filter((dog)=>dog.dogBreed == req.query.dogBreed);
+export const getDogByDogBreed=async (req,res)=> {
+    let result = await Dog.find({dogBreed: req.query.dogBreed});
     res.status(200).send(result);
 };
 
-export const findDogsById=(req,res)=> {
-    let dog = dogs.find((b)=> b.id == req.params.id);
+export const getDogById=async (req,res)=> {
+    let dog = await Dog.findById(req.params.id);
     res.status(200).send(dog);
 };
 
-export const addDog=(req,res)=> {
+export const addDog=async (req,res)=> {
     const errors = validationResult(req);
     if(!errors.isEmpty()){
         return res.status(400).json({errors: errors.array()});
     }
-    let dog = req.body;
-    dogs.push(dog);
-    res.status(201).send(`Added ${dog.dogBreed} to dog collection`);
+    const dog = new Dog({
+        dogBreed: req.body.dogBreed,
+        colour: req.body.colour,
+        age: req.body.age,
+      });
+
+      dog.save(dog).then((todo) => res.status(201).send(todo));
 };
 
 export const newDogValidators = [
