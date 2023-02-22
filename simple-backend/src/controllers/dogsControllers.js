@@ -2,7 +2,7 @@ import { check, validationResult } from "express-validator";
 import { Dog } from "../models/dog.js";
 
 
-export const getDogs=async (req,res)=> {
+export const getDog=async (req,res)=> {
     const dogs = await Dog.find();
     res.status(200).send(dogs);
 };

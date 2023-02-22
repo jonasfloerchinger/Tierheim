@@ -1,17 +1,18 @@
 import express from "express";
+import { getDog, getDogByDogBreed, getDogById } from "../controllers/dogsControllers.js";
 import {
-    findDogs,
-    findDogsById,
-    getDogs,
+    getDog,
+    getDogByDogBreed,
+    getDogById,
     addDog,
     newDogValidators,
   } from "./dogsControllers.js";
 
   const router = express.Router();
 
-  router.get("/", getDogs);
-  router.get("/search", findDogs);
-  router.get("/:id", findDogsById);
+  router.get("/", getDog);
+  router.get("/search", getDogByDogBreed);
+  router.get("/:id", getDogById);
   router.post("/", newDogValidators, addDog);
 
   export default router;
