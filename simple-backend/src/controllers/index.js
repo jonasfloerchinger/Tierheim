@@ -1,4 +1,5 @@
 import express from "express";
+import mongoose from "mongoose";
 import bodyParser from "bodyParser";
 import router from "./dogsRoutes";
 
@@ -10,4 +11,7 @@ app.use("/dogs", router);
 
 app.listen(port, () => {
     console.log("Server running on: http://localhost:${port}");
+});
+mongoose.connect("mongodb://mongo:27017/test").then(() => {
+    console.log("Database connected");
 });
