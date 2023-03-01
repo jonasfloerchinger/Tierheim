@@ -1,4 +1,4 @@
-import mongoose from "mongoos";
+import mongoose from "mongoose";
 
 const hamsSchema = new mongoose.Schema({
     hamsBreed: String,

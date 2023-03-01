@@ -1,9 +1,9 @@
 import express from "express";
 import mongoose from "mongoose";
-import bodyParser from "bodyParser";
-import dogrouter from "./dogsRoutes";
-import catrouter from "./catsRoutes";
-import hamsterrouter from "./hamstersRoutes";
+import bodyParser from "body-parser";
+import dogrouter from "./routes/dogsRoutes.js";
+import catrouter from "./routes/catsRoutes.js";
+import hamsterrouter from "./routes/hamstersRoutes.js";
 
 const app = express();
 const port = 4000;
