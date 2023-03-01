@@ -12,6 +12,7 @@ app.use(bodyParser.json());
 app.use("/dogs", dogrouter);
 app.use("/cats", catrouter);
 app.use("/hamsters", hamsterrouter);
+app.use("/api", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 app.listen(port, () => {
     console.log("Server running on: http://localhost:${port}");
