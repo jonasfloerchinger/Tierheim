@@ -5,6 +5,7 @@ import swaggerUi from "swagger-ui-express";
 import dogrouter from "./routes/dogsRoutes.js";
 import catrouter from "./routes/catsRoutes.js";
 import hamsterrouter from "./routes/hamstersRoutes.js";
+import swaggerDocs from "../swaggerDocs.js";
 
 const app = express();
 const port = 4000;
