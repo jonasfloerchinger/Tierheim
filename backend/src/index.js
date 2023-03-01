@@ -1,17 +1,17 @@
 import express from "express";
 import mongoose from "mongoose";
 import bodyParser from "bodyParser";
-import router from "./dogsRoutes";
-import router from "./catsRoutes";
-import router from "./hamstersRoutes";
+import dogrouter from "./dogsRoutes";
+import catrouter from "./catsRoutes";
+import hamsterrouter from "./hamstersRoutes";
 
 const app = express();
 const port = 4000;
 
 app.use(bodyParser.json());
-app.use("/dogs", router);
-app.use("/cats", router);
-app.use("/hamsters", router);
+app.use("/dogs", dogrouter);
+app.use("/cats", catrouter);
+app.use("/hamsters", hamsterrouter);
 
 app.listen(port, () => {
     console.log("Server running on: http://localhost:${port}");
