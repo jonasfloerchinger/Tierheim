@@ -55,6 +55,18 @@ const swaggerDocs = {
             },
           },
         },
+        delete:{
+          tags: ["Dogs"],
+          summary: "Delete all dogs in the system",
+          responses: {
+            200: {
+              description: "OK",
+              schema: {
+                $ref: "#/definitions/Dog",
+              },
+            },
+          },
+        }
       },
       "/dog{id}": {
         get: {
@@ -139,6 +151,18 @@ const swaggerDocs = {
             },
           },
         },
+        delete:{
+          tags: ["Cats"],
+          summary: "Delete all cats in the system",
+          responses: {
+            200: {
+              description: "OK",
+              schema: {
+                $ref: "#/definitions/Cat",
+              },
+            },
+          },
+        }
       },
       "/cat{id}": {
         get: {
@@ -223,6 +247,18 @@ const swaggerDocs = {
             },
           },
         },
+        delete:{
+          tags: ["Hamsters"],
+          summary: "Delete all hamsters in the system",
+          responses: {
+            200: {
+              description: "OK",
+              schema: {
+                $ref: "#/definitions/Hamster",
+              },
+            },
+          },
+        }
       },
       "/hamster{id}": {
         get: {

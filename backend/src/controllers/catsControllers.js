@@ -17,6 +17,11 @@ export const getCatById=async (req,res)=> {
     res.status(200).send(cat);
 };
 
+export const deleteCat=async (req,res)=> {
+    const cats = await Cat.deleteMany();
+    res.status(200).send("Alle Katzen wurden entfernt");
+};
+
 export const addCat=async (req,res)=> {
     const errors = validationResult(req);
     if(!errors.isEmpty()){

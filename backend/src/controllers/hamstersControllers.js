@@ -17,6 +17,11 @@ export const getHamsById=async (req,res)=> {
     res.status(200).send(hams);
 };
 
+export const deleteHams=async (req,res)=> {
+    const hams = await Hams.deleteMany();
+    res.status(200).send("Alle Hamster wurden entfernt");
+};
+
 export const addHams=async (req,res)=> {
     const errors = validationResult(req);
     if(!errors.isEmpty()){
