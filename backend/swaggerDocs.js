@@ -115,6 +115,28 @@ const swaggerDocs = {
             },
           },
         },
+        delete: {
+          tags: ["Dogs"],
+          summary: "Delete a specific dog by age",
+          parameters: [
+            {
+              name: "age",
+              in: "path",
+              description: "age of the dog searched for",
+              schema: {
+                $ref: "#/definitions/Dog",
+              },
+            },
+          ],
+          responses: {
+            200: {
+              description: "OK",
+              schema: {
+                $ref: "#/definitions/Dog",
+              },
+            },
+          },
+        },
       },
       "/cats": {
         get: {
@@ -211,6 +233,28 @@ const swaggerDocs = {
             },
           },
         },
+        delete: {
+          tags: ["Cats"],
+          summary: "Delete a specific cat by age",
+          parameters: [
+            {
+              name: "age",
+              in: "path",
+              description: "age of the cat searched for",
+              schema: {
+                $ref: "#/definitions/Cat",
+              },
+            },
+          ],
+          responses: {
+            200: {
+              description: "OK",
+              schema: {
+                $ref: "#/definitions/Cat",
+              },
+            },
+          },
+        },
       },
       "/hamsters": {
         get: {
@@ -293,6 +337,28 @@ const swaggerDocs = {
               name: "hamsBreed",
               in: "path",
               description: "hamsBreed of the hamster searched for",
+              schema: {
+                $ref: "#/definitions/Hamster",
+              },
+            },
+          ],
+          responses: {
+            200: {
+              description: "OK",
+              schema: {
+                $ref: "#/definitions/Hamster",
+              },
+            },
+          },
+        },
+        delete: {
+          tags: ["Hamsters"],
+          summary: "Delete a specific hamster by age",
+          parameters: [
+            {
+              name: "age",
+              in: "path",
+              description: "age of the hamster searched for",
               schema: {
                 $ref: "#/definitions/Hamster",
               },

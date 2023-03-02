@@ -22,6 +22,11 @@ export const deleteHams=async (req,res)=> {
     res.status(200).send("Alle Hamster wurden entfernt");
 };
 
+export const deleteHamsByAge=async (req,res)=> {
+    let hams = await Hams.deleteOne({age: req.query.hamsBreed});
+    res.status(200).send("Hamster wurde entfernt");
+};
+
 export const addHams=async (req,res)=> {
     const errors = validationResult(req);
     if(!errors.isEmpty()){

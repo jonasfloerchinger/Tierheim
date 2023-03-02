@@ -5,6 +5,7 @@ import {
     getHamsById,
     addHams,
     deleteHams,
+    deleteHamsByAge,
     newHamsValidators,
   } from "../controllers/hamstersControllers.js";
 
@@ -13,7 +14,8 @@ import {
   router.get("/", getHams);
   router.get("/search", getHamsByHamsBreed);
   router.get("/:id", getHamsById);
-  router.get("/", deleteHams);
+  router.delete("/", deleteHams);
+  router.delete("/search", deleteHamsByAge);
   router.post("/", newHamsValidators, addHams);
 
   export default router;
