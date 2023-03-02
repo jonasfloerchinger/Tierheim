@@ -4,6 +4,7 @@ import {
     getDogByDogBreed,
     getDogById,
     addDog,
+    deleteDog,
     newDogValidators,
   } from "../controllers/dogsControllers.js";
 
@@ -12,6 +13,7 @@ import {
   router.get("/", getDog);
   router.get("/search", getDogByDogBreed);
   router.get("/:id", getDogById);
+  router.delete("/", deleteDog);
   router.post("/", newDogValidators, addDog);
-
+  
   export default router;

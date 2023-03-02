@@ -17,6 +17,11 @@ export const getDogById=async (req,res)=> {
     res.status(200).send(dog);
 };
 
+export const deleteDog=async (req,res)=> {
+    const dogs = await Dog.deleteMany();
+    res.status(200).send("Alle Hunde wurden entfernt");
+};
+
 export const addDog=async (req,res)=> {
     const errors = validationResult(req);
     if(!errors.isEmpty()){
