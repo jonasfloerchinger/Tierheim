@@ -3,6 +3,7 @@ import { Hams } from "../models/hamster.js";
 
 
 export const getHams=async (req,res)=> {
+    res.set("Access-Control-Allow-Origin", "http://localhost:4000");
     const hams = await Hams.find();
     res.status(200).send(hams);
 };
