@@ -17,7 +17,7 @@ body {
     text-align: center;
     font-weight: bold;
     font-size: 15px;
-    margin: 5px;
+    margin-right: 1200px;
     display: block;
   }
 
@@ -32,6 +32,18 @@ body {
     margin: auto;
     display: block;
   }
+
+  #hamsterFetcher {
+    background-color: brown;
+    color: beige;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 1200px;
+    display: block;
+  }
   
   .dogData {
     margin-top: 4%;
@@ -42,5 +54,11 @@ body {
   .catData {
     margin-top: 4%;
     text-align: center;
+    color: brown;
+  }
+
+  .hamsterData {
+    margin-top: 4%;
+    text-align: right;
     color: brown;
   }
