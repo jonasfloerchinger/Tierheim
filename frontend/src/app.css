@@ -9,7 +9,7 @@ body {
     margin-top: 5%;
   }
   
-  #fetcher {
+  #dogFetcher {
     background-color: brown;
     color: beige;
     border: none;
@@ -17,11 +17,29 @@ body {
     text-align: center;
     font-weight: bold;
     font-size: 15px;
-    margin: 0 auto;
+    margin: 5px;
+    display: block;
+  }
+
+  #catFetcher {
+    background-color: brown;
+    color: beige;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    margin: auto;
     display: block;
   }
   
-  .data {
+  .dogData {
+    margin-top: 4%;
+    text-align: left;
+    color: brown;
+  }
+
+  .catData {
     margin-top: 4%;
     text-align: center;
     color: brown;
