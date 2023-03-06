@@ -3,7 +3,7 @@ import { Dog } from "../models/dog.js";
 
 
 export const getDog=async (req,res)=> {
-    res.set("Access-Control-Allow-Origin", "http://localhost:4000");
+    res.set("Access-Control-Allow-Origin", "http://localhost:3000");
     const dogs = await Dog.find();
     res.status(200).send(dogs);
 };

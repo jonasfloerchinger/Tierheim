@@ -30,7 +30,7 @@ class App extends React.Component {
               {/* generates a div for every entry */}
               {this.state.dogs.map((dog, key) => (
                 <div key={key}>
-                  {dog.dogBreed} by {dog.colour}
+                  {dog.dogBreed} colour {dog.colour}
                 </div>
               ))}
             </div>
