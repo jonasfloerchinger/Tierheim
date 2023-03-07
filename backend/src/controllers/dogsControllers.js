@@ -23,9 +23,14 @@ export const deleteDog=async (req,res)=> {
     res.status(200).send("Alle Hunde wurden entfernt");
 };
 
-export const deleteDogByAge=async (req,res)=> {
-    let dog = await Dog.deleteOne({age: req.query.dogBreed});
+export const deleteDogById=async (req,res)=> {
+    let dog = await Dog.deleteOne({id: req.params.id});
     res.status(200).send("Hund wurde entfernt");
+};
+
+export const updateDogAge=async (req,res)=> {
+    let dog = await Dog.updateOne({id: req.params.id}, {age:req.query.age});
+    res.status(200).send(dog);
 };
 
 export const addDog=async (req,res)=> {

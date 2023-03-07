@@ -23,9 +23,14 @@ export const deleteCat=async (req,res)=> {
     res.status(200).send("Alle Katzen wurden entfernt");
 };
 
-export const deleteCatByAge=async (req,res)=> {
-    let cat = await Cat.deleteOne({age: req.query.catBreed});
+export const deleteCatById=async (req,res)=> {
+    let cat = await Cat.deleteOne({id: req.params.id});
     res.status(200).send("Katze wurde entfernt");
+};
+
+export const updateCatAge=async (req,res)=> {
+    let cat = await Cat.updateOne({id: req.params.id}, {age:req.query.age});
+    res.status(200).send(cat);
 };
 
 export const addCat=async (req,res)=> {

@@ -23,9 +23,14 @@ export const deleteHams=async (req,res)=> {
     res.status(200).send("Alle Hamster wurden entfernt");
 };
 
-export const deleteHamsByAge=async (req,res)=> {
-    let hams = await Hams.deleteOne({age: req.query.hamsBreed});
+export const deleteHamsById=async (req,res)=> {
+    let hams = await Hams.deleteOne({id: req.params.id});
     res.status(200).send("Hamster wurde entfernt");
+};
+
+export const updateHamsAge=async (req,res)=> {
+    let hams = await Hams.updateOne({id: req.params.id}, {age:req.query.age});
+    res.status(200).send(hams);
 };
 
 export const addHams=async (req,res)=> {
