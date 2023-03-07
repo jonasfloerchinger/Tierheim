@@ -71,12 +71,64 @@ const swaggerDocs = {
       "/dog{id}": {
         get: {
           tags: ["Dogs"],
-          summary: "Get a specific dog by id",
+          summary: "Get a specific dog by Id",
           parameters: [
             {
               name: "id",
               in: "body",
               description: "Id of the dog searched for",
+              schema: {
+                $ref: "#/definitions/Dog",
+              },
+            },
+          ],
+          responses: {
+            200: {
+              description: "OK",
+              schema: {
+                $ref: "#/definitions/Dog",
+              },
+            },
+          },
+        },
+        delete: {
+          tags: ["Dogs"],
+          summary: "Delete a specific dog by Id",
+          parameters: [
+            {
+              name: "id",
+              in: "body",
+              description: "Id of the dog searched for",
+              schema: {
+                $ref: "#/definitions/Dog",
+              },
+            },
+          ],
+          responses: {
+            200: {
+              description: "OK",
+              schema: {
+                $ref: "#/definitions/Dog",
+              },
+            },
+          },
+        },
+        put: {
+          tags: ["Dogs"],
+          summary: "Update the age of a specific dog by Id",
+          parameters: [
+            {
+              name: "id",
+              in: "body",
+              description: "Id of the dog searched for",
+              schema: {
+                $ref: "#/definitions/Dog",
+              },
+            },
+            {
+              name: "age",
+              in: "body",
+              description: "Age the current age has to been changed to",
               schema: {
                 $ref: "#/definitions/Dog",
               },
@@ -101,28 +153,6 @@ const swaggerDocs = {
               name: "dogBreed",
               in: "path",
               description: "dogBreed of the dog searched for",
-              schema: {
-                $ref: "#/definitions/Dog",
-              },
-            },
-          ],
-          responses: {
-            200: {
-              description: "OK",
-              schema: {
-                $ref: "#/definitions/Dog",
-              },
-            },
-          },
-        },
-        delete: {
-          tags: ["Dogs"],
-          summary: "Delete a specific dog by age",
-          parameters: [
-            {
-              name: "age",
-              in: "path",
-              description: "age of the dog searched for",
               schema: {
                 $ref: "#/definitions/Dog",
               },
@@ -189,12 +219,64 @@ const swaggerDocs = {
       "/cat{id}": {
         get: {
           tags: ["Cats"],
-          summary: "Get a specific cat by id",
+          summary: "Get a specific cat by Id",
           parameters: [
             {
               name: "id",
               in: "body",
               description: "Id of the cat searched for",
+              schema: {
+                $ref: "#/definitions/Cat",
+              },
+            },
+          ],
+          responses: {
+            200: {
+              description: "OK",
+              schema: {
+                $ref: "#/definitions/Cat",
+              },
+            },
+          },
+        },
+        delete: {
+          tags: ["Cats"],
+          summary: "Delete a specific cat by Id",
+          parameters: [
+            {
+              name: "id",
+              in: "body",
+              description: "Id of the cat searched for",
+              schema: {
+                $ref: "#/definitions/Cat",
+              },
+            },
+          ],
+          responses: {
+            200: {
+              description: "OK",
+              schema: {
+                $ref: "#/definitions/Cat",
+              },
+            },
+          },
+        },
+        put: {
+          tags: ["Cats"],
+          summary: "Update the age of a specific cat by Id",
+          parameters: [
+            {
+              name: "id",
+              in: "body",
+              description: "Id of the cat searched for",
+              schema: {
+                $ref: "#/definitions/Cat",
+              },
+            },
+            {
+              name: "age",
+              in: "body",
+              description: "Age the current age has to been changed to",
               schema: {
                 $ref: "#/definitions/Cat",
               },
@@ -219,28 +301,6 @@ const swaggerDocs = {
               name: "catBreed",
               in: "path",
               description: "catBreed of the cat searched for",
-              schema: {
-                $ref: "#/definitions/Cat",
-              },
-            },
-          ],
-          responses: {
-            200: {
-              description: "OK",
-              schema: {
-                $ref: "#/definitions/Cat",
-              },
-            },
-          },
-        },
-        delete: {
-          tags: ["Cats"],
-          summary: "Delete a specific cat by age",
-          parameters: [
-            {
-              name: "age",
-              in: "path",
-              description: "age of the cat searched for",
               schema: {
                 $ref: "#/definitions/Cat",
               },
@@ -307,12 +367,64 @@ const swaggerDocs = {
       "/hamster{id}": {
         get: {
           tags: ["Hamsters"],
-          summary: "Get a specific hamster by id",
+          summary: "Get a specific hamster by Id",
           parameters: [
             {
               name: "id",
               in: "body",
               description: "Id of the hamster searched for",
+              schema: {
+                $ref: "#/definitions/Hamster",
+              },
+            },
+          ],
+          responses: {
+            200: {
+              description: "OK",
+              schema: {
+                $ref: "#/definitions/Hamster",
+              },
+            },
+          },
+        },
+        delete: {
+          tags: ["Hamsters"],
+          summary: "Delete a specific hamster by Id",
+          parameters: [
+            {
+              name: "id",
+              in: "body",
+              description: "Id of the hamster searched for",
+              schema: {
+                $ref: "#/definitions/Hamster",
+              },
+            },
+          ],
+          responses: {
+            200: {
+              description: "OK",
+              schema: {
+                $ref: "#/definitions/Hamster",
+              },
+            },
+          },
+        },
+        put: {
+          tags: ["Hamsters"],
+          summary: "Update the age of a specific hamster by Id",
+          parameters: [
+            {
+              name: "id",
+              in: "body",
+              description: "Id of the hamster searched for",
+              schema: {
+                $ref: "#/definitions/Hamster",
+              },
+            },
+            {
+              name: "age",
+              in: "body",
+              description: "Age the current age has to been changed to",
               schema: {
                 $ref: "#/definitions/Hamster",
               },
@@ -337,28 +449,6 @@ const swaggerDocs = {
               name: "hamsBreed",
               in: "path",
               description: "hamsBreed of the hamster searched for",
-              schema: {
-                $ref: "#/definitions/Hamster",
-              },
-            },
-          ],
-          responses: {
-            200: {
-              description: "OK",
-              schema: {
-                $ref: "#/definitions/Hamster",
-              },
-            },
-          },
-        },
-        delete: {
-          tags: ["Hamsters"],
-          summary: "Delete a specific hamster by age",
-          parameters: [
-            {
-              name: "age",
-              in: "path",
-              description: "age of the hamster searched for",
               schema: {
                 $ref: "#/definitions/Hamster",
               },
