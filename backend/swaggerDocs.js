@@ -59,8 +59,8 @@ const swaggerDocs = {
           tags: ["Dogs"],
           summary: "Delete all dogs in the system",
           responses: {
-            200: {
-              description: "OK",
+            204: {
+              description: "Deleted",
               schema: {
                 $ref: "#/definitions/Dog",
               },
@@ -105,8 +105,8 @@ const swaggerDocs = {
             },
           ],
           responses: {
-            200: {
-              description: "OK",
+            204: {
+              description: "Deleted",
               schema: {
                 $ref: "#/definitions/Dog",
               },
@@ -207,8 +207,8 @@ const swaggerDocs = {
           tags: ["Cats"],
           summary: "Delete all cats in the system",
           responses: {
-            200: {
-              description: "OK",
+            204: {
+              description: "Deleted",
               schema: {
                 $ref: "#/definitions/Cat",
               },
@@ -253,8 +253,8 @@ const swaggerDocs = {
             },
           ],
           responses: {
-            200: {
-              description: "OK",
+            204: {
+              description: "Deleted",
               schema: {
                 $ref: "#/definitions/Cat",
               },
@@ -355,8 +355,8 @@ const swaggerDocs = {
           tags: ["Hamsters"],
           summary: "Delete all hamsters in the system",
           responses: {
-            200: {
-              description: "OK",
+            204: {
+              description: "Deleted",
               schema: {
                 $ref: "#/definitions/Hamster",
               },
@@ -401,8 +401,8 @@ const swaggerDocs = {
             },
           ],
           responses: {
-            200: {
-              description: "OK",
+            204: {
+              description: "Deleted",
               schema: {
                 $ref: "#/definitions/Hamster",
               },

@@ -20,12 +20,12 @@ export const getDogById=async (req,res)=> {
 
 export const deleteDog=async (req,res)=> {
     const dogs = await Dog.deleteMany();
-    res.status(200).send("Alle Hunde wurden entfernt");
+    res.status(204).send("Alle Hunde wurden entfernt");
 };
 
 export const deleteDogById=async (req,res)=> {
     let dog = await Dog.deleteOne({id: req.params.id});
-    res.status(200).send("Hund wurde entfernt");
+    res.status(204).send("Hund wurde entfernt");
 };
 
 export const updateDogAge=async (req,res)=> {
@@ -36,7 +36,7 @@ export const updateDogAge=async (req,res)=> {
 export const addDog=async (req,res)=> {
     const errors = validationResult(req);
     if(!errors.isEmpty()){
-        return res.status(400).json({errors: errors.array()});
+        return res.status(201).json({errors: errors.array()});
     }
     const dog = new Dog({
         dogBreed: req.body.dogBreed,

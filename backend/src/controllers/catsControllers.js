@@ -20,12 +20,12 @@ export const getCatById=async (req,res)=> {
 
 export const deleteCat=async (req,res)=> {
     const cats = await Cat.deleteMany();
-    res.status(200).send("Alle Katzen wurden entfernt");
+    res.status(204).send("Alle Katzen wurden entfernt");
 };
 
 export const deleteCatById=async (req,res)=> {
     let cat = await Cat.deleteOne({id: req.params.id});
-    res.status(200).send("Katze wurde entfernt");
+    res.status(204).send("Katze wurde entfernt");
 };
 
 export const updateCatAge=async (req,res)=> {
@@ -36,7 +36,7 @@ export const updateCatAge=async (req,res)=> {
 export const addCat=async (req,res)=> {
     const errors = validationResult(req);
     if(!errors.isEmpty()){
-        return res.status(400).json({errors: errors.array()});
+        return res.status(201).json({errors: errors.array()});
     }
     const cat = new Cat({
         catBreed: req.body.catBreed,

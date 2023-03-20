@@ -20,12 +20,12 @@ export const getHamsById=async (req,res)=> {
 
 export const deleteHams=async (req,res)=> {
     const hams = await Hams.deleteMany();
-    res.status(200).send("Alle Hamster wurden entfernt");
+    res.status(204).send("Alle Hamster wurden entfernt");
 };
 
 export const deleteHamsById=async (req,res)=> {
     let hams = await Hams.deleteOne({id: req.params.id});
-    res.status(200).send("Hamster wurde entfernt");
+    res.status(204).send("Hamster wurde entfernt");
 };
 
 export const updateHamsAge=async (req,res)=> {
@@ -36,7 +36,7 @@ export const updateHamsAge=async (req,res)=> {
 export const addHams=async (req,res)=> {
     const errors = validationResult(req);
     if(!errors.isEmpty()){
-        return res.status(400).json({errors: errors.array()});
+        return res.status(201).json({errors: errors.array()});
     }
     const hams = new Hams({
         hamsBreed: req.body.hamsBreed,
