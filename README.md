@@ -12,3 +12,17 @@ Lösung: Eine Möglichkeit, dieses Problem zu lösen, besteht darin, den Service
 Sicherheitsprobleme: Wenn ein Service von mehreren Parteien genutzt wird, kann es schwierig sein, die Sicherheit zu gewährleisten. Jede Partei kann möglicherweise sensible Daten anderer Parteien zugreifen, was ein Risiko für die Vertraulichkeit und Integrität der Daten darstellt. 
 
 Lösung: Eine mögliche Lösung besteht darin, eine starke Authentifizierung und Autorisierung zu implementieren, um sicherzustellen, dass nur autorisierte Benutzer auf den Service zugreifen können. Es ist auch wichtig, Sicherheitsüberwachungen durchzuführen, um potenzielle Schwachstellen und und Angriffe zu verhindern. Darüber hinaus sollten die Daten verschlüsselt werden, um sicherzustellen, dass sie vor unbefugtem Zugriff geschützt sind.
+
+
+
+Frage 3: Was ist abseits der reinen Programmierung für die Produktivsetzung des entwickelten Services zu beachten? Nenne mindestens zwei Aspekte und führe diese in ein paar Sätzen aus.
+
+Antwort:
+Sicherheit: Der Service muss ebenso sicher sein, um vor Angriffen und Datenverlust zu schützen.
+
+Infrastrukur-Management: Neben der Programmierung, muss der Service auch auf einer geeigneten Infrastruktur gehostet werden. Außerdem müssen Aspekte wie Skalierbarkeit, Ausfallsicherheit, Lastverteilung und Monitoring berücksichtigt werden.
+
+Deployment-Prozess: Eine kontrollierende und automatisierte Bereitstellung des Services ist durch die Verwendung von DevOps-Methoden oder Tools wie CI/CD-Pipelines und Containerisierung erforderlich. 
+
+Dokumentation und Schulung: Wie üblich, muss auch eine umfassende Dokumentation für den Service vorhanden sein, undzwar nicht nur für Entwickler, sondern auch für Tester, Betreiber und Benutzer muss diese verständlich sein.
+Außerdem müssen Benutzer und Betreiber für den Service geschult werden, um sicherzustellen, dass der Service produktionsbereit ist reibungslos betrieben werden kann. Ein Support-Team sollte ebensfalls vorhanden sein, um bei Problemen zu helfen und technischen Support zu bieten.
