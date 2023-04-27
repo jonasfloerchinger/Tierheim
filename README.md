@@ -3,6 +3,15 @@ Verteilte Systeme Abgabe
 Thema: Tierheim mit Hunden, Katzen und Hamstern
 
 
+Frage 1: Beschreibt ein konkretes Anwendungsszenario für den entwickelten Service und schildert (in wenigen Worten) eine mögliche Gesamt-Architektur, in welcher sich diese befinden könnte.
+
+Antwort:
+Angenommen, ein Tierheimbetreiber möchte die Informationen über die verfügbaren Hunde und Katzen auf seiner Website aktualisieren, um potenzielle Adoptivfamilien über die verfügbaren Tiere zu informieren. Der Betreiber könnte nun einfach das entwickelte Backend verwenden, um die Datenbank mit den Informationen zu aktualisieren, einschließlich der Hunderassen, Katzenarten, Alter, Größe, Geschlecht und Bilder der Tiere.
+Sobald die Informationen aktualisiert sind, können potenzielle Adoptivfamilien auf die Website des Tierheims zugreifen und durch die verfügbaren Tiere stöbern. Sie können nach bestimmten Arten, Rassen, Größen oder anderen Kriterien filtern, um die Suche zu erleichtern.
+Wenn eine Familie ein Tier gefunden hat, das ihnen gefällt, können sie eine Anfrage stellen, um mehr Informationen über das Tier zu erhalten oder um es zu adoptieren. Der Betreiber des Tierheims erhält dann eine Benachrichtigung über die Anfrage und kann entsprechend reagieren.
+
+-------------------------------------------------------------------------------------------
+
 Frage 2: Welche Probleme können entstehen, wenn der entwickelte Service von mehreren Parteien verwendet wird? Beschreibt zwei Probleme sowie mögliche Lösungen. 
 
 Skalierungsprobleme: Wenn ein Service von vielen Benutzern gleichzeitig genutzt wird, kann es zu Engpässen und Leistungsproblemen kommen. Die Folgen können eine unzureichende Reaktionszeit, Verzögerungen bei der Datenverarbeitung und sogar Ausfallzeiten des Services sein.
